@@ -61,7 +61,9 @@ public class MyLine implements Drawable {
 	}
 
 	public boolean contains(double x, double y) {
-		float beginx = (float) Math.min(x1, x2);
+		return l.ptSegDist(x, y) < 10;
+		
+		/*float beginx = (float) Math.min(x1, x2);
 		float beginy = (float) Math.min(y1, y2);
 		float eindx = (float) Math.max(x1, x2);
 		float eindy = (float) Math.max(y1, y2);
@@ -69,7 +71,7 @@ public class MyLine implements Drawable {
 		float hel = (eindy - beginy) / (eindx - beginx);
 		float klikhel = (float) ((y - beginy) / (x - beginx));
 
-		return Math.abs(klikhel - hel) < 0.3;
+		return Math.abs(klikhel - hel) < 0.3;*/
 	}
 
 	@Override
